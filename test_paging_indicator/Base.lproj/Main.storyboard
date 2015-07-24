@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="qG5-jn-Kap" customClass="CustomPageIndicator">
+                                <rect key="frame" x="281" y="492" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="0.98431372549999996" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentPage">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CUSTOM PAGE CONTROL" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mX-yM-khY">
+                                <rect key="frame" x="156" y="286" width="288" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3P3-vW-yXE">
+                                <rect key="frame" x="254" y="341" width="92" height="30"/>
+                                <state key="normal" title="Change page">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changePage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bNF-Q3-Scn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3P3-vW-yXE" firstAttribute="top" secondItem="8mX-yM-khY" secondAttribute="bottom" constant="26" id="0jb-9W-Dr8"/>
+                            <constraint firstAttribute="centerX" secondItem="8mX-yM-khY" secondAttribute="centerX" id="FLM-q2-zjz"/>
+                            <constraint firstAttribute="centerX" secondItem="3P3-vW-yXE" secondAttribute="centerX" id="MZh-o0-80f"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qG5-jn-Kap" secondAttribute="bottom" constant="71" id="kfE-TF-c4w"/>
+                            <constraint firstItem="qG5-jn-Kap" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uzF-Oo-Kwb"/>
+                            <constraint firstAttribute="centerY" secondItem="8mX-yM-khY" secondAttribute="centerY" id="vDH-I3-Qgl"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3P3-vW-yXE" secondAttribute="bottom" constant="229" id="wsh-1J-aa6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_pageView" destination="qG5-jn-Kap" id="M1h-HU-mnl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
